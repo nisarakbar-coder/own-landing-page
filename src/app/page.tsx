@@ -73,6 +73,7 @@ export default function HomePage() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button 
                     size="lg" 
+                    className="bg-emerald-500 hover:bg-emerald-600 text-slate-900"
                     data-analytics="hero-primary-cta"
                     aria-describedby="demo-description"
                   >
