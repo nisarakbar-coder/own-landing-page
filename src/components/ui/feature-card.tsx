@@ -7,7 +7,7 @@ interface FeatureCardProps {
   title: string;
   description: string;
   icon?: LucideIcon;
-  features?: string[];
+  features?: readonly string[];
   className?: string;
   delay?: number;
 }

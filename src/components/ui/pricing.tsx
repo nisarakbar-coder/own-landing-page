@@ -11,7 +11,7 @@ interface PricingPlan {
 
 interface PricingProps {
   title: string;
-  plans: PricingPlan[];
+  plans: readonly PricingPlan[];
   note?: string;
   className?: string;
 }

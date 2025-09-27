@@ -11,11 +11,11 @@ import {
 interface Module {
   title: string;
   description: string;
-  features: string[];
+  features: readonly string[];
 }
 
 interface ModuleGridProps {
-  modules: Module[];
+  modules: readonly Module[];
   className?: string;
 }
 

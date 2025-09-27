@@ -122,7 +122,7 @@ export default function HomePage() {
                 </div>
                 
                 <div className="absolute -bottom-4 -right-4">
-                  <BadgeRow badges={HERO.trustBadges} />
+                  <BadgeRow badges={HERO.trustBadges as unknown as Array<{name: string; status: string; active?: boolean}>} />
                 </div>
               </motion.div>
             </div>

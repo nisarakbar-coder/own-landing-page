@@ -8,7 +8,7 @@ interface TimelineStep {
 }
 
 interface TimelineProps {
-  steps: TimelineStep[];
+  steps: readonly TimelineStep[];
   className?: string;
 }
 

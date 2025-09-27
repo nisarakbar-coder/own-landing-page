@@ -14,7 +14,7 @@ interface FAQItem {
 
 interface FAQProps {
   title: string;
-  items: FAQItem[];
+  items: readonly FAQItem[];
   className?: string;
 }
 
