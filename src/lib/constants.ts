@@ -18,9 +18,9 @@ export const HERO = {
     { label: "White-Label Platform", value: "Ready" },
   ],
   trustBadges: [
-    { name: "SECP Sandbox", status: "Active" },
-    { name: "Shariah Board", status: "Certified" },
-    { name: "Fireblocks Custody", status: "Integrated" },
+    { name: "SECP Sandbox", status: "Active", active: true },
+    { name: "Shariah Board", status: "Certified", active: true },
+    { name: "Fireblocks Custody", status: "Integrated", active: true },
   ],
 } as const;
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface BadgeRowProps {
-  badges: Array<{
+  badges: readonly Array<{
     name: string;
     status: string;
     active?: boolean;
