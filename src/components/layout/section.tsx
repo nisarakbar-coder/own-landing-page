@@ -34,8 +34,8 @@ export function Section({
         {
           "py-8 sm:py-12": padding === "sm",
           "py-12 sm:py-16": padding === "md",
-          "py-16 sm:py-20": padding === "lg",
-          "py-20 sm:py-24": padding === "xl",
+          "py-20": padding === "lg", // Updated to match design system (generous spacing)
+          "py-24 sm:py-32": padding === "xl",
         },
         className
       )}

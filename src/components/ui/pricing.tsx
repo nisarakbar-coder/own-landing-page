@@ -26,9 +26,9 @@ export function Pricing({ title, plans, note, className }: PricingProps) {
       className={cn("space-y-8", className)}
     >
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
+        <h2 className="text-3xl font-bold text-slate-100 mb-4">{title}</h2>
         {note && (
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-slate-300 max-w-2xl mx-auto">
             {note}
           </p>
         )}
@@ -46,7 +46,7 @@ export function Pricing({ title, plans, note, className }: PricingProps) {
             <Card className="h-full hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="text-lg">{plan.name}</CardTitle>
-                <div className="text-2xl font-bold text-primary">{plan.price}</div>
+                <div className="text-2xl font-bold text-emerald-500">{plan.price}</div>
                 <CardDescription>{plan.description}</CardDescription>
               </CardHeader>
             </Card>

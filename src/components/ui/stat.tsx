@@ -24,14 +24,14 @@ export function Stat({
       transition={{ duration: 0.6, delay }}
       className={cn("text-center", className)}
     >
-      <div className="text-3xl font-bold text-primary sm:text-4xl">
+      <div className="text-3xl font-bold text-emerald-500 sm:text-4xl">
         {value}
       </div>
-      <div className="mt-2 text-lg font-semibold text-foreground">
+      <div className="mt-2 text-lg font-semibold text-slate-100">
         {label}
       </div>
       {description && (
-        <div className="mt-1 text-sm text-muted-foreground">
+        <div className="mt-1 text-sm text-slate-300">
           {description}
         </div>
       )}

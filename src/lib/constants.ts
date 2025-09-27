@@ -8,41 +8,42 @@ export const BRAND = {
 } as const;
 
 export const HERO = {
-  headline: "Institutional-grade Tokenization for Shariah-compliant RWAs",
-  subcopy: "OWN LAB is an RWA investment bank providing a turnkey, compliant, and scalable tokenization stack. Launch pilots in Pakistan's SECP sandbox, expand to GCC & Malaysia, and connect to Western liquidity pools.",
+  eyebrow: "Shariah-compliant RWA Platform",
+  headline: "Institutional-grade Tokenization, Built for Islamic Finance",
+  subcopy: "Launch in Pakistan's SECP sandbox, expand into GCC & Malaysia, and connect to Western liquidity with a turnkey, compliant stack.",
   primaryCta: "Book a Demo",
   secondaryCta: "Download One-Pager",
-  kpis: [
-    { label: "Target: $50M AUM in Year 1", value: "$50M" },
+  stats: [
+    { label: "$50M AUM Target (Year 1)", value: "$50M" },
     { label: "10 Institutional Clients", value: "10+" },
     { label: "White-Label Platform", value: "Ready" },
   ],
   trustBadges: [
     { name: "SECP Sandbox", status: "Active", active: true },
-    { name: "Shariah Board", status: "Certified", active: true },
+    { name: "Independent Shariah Board", status: "Certified", active: true },
     { name: "Fireblocks Custody", status: "Integrated", active: true },
   ],
 } as const;
 
 export const VALUE_PROPS = [
   {
-    title: "Turnkey TaaS Stack",
+    title: "Turnkey TaaS",
     description: "Complete issuance, compliance, custody, and secondary workflows in one platform.",
     icon: "layers",
   },
   {
-    title: "Shariah-First by Design",
+    title: "Shariah-First",
     description: "Scholar-reviewed structures with screened revenue models and Sukuk-friendly architecture.",
     icon: "shield-check",
   },
   {
     title: "Regulatory Pathway",
-    description: "Pakistan (SECP) → GCC (DIFC/ADGM/Bahrain) → Malaysia expansion strategy.",
+    description: "Prove value in SECP, scale to GCC/Malaysia, tap Western liquidity.",
     icon: "map",
   },
   {
     title: "Institutional Connectivity",
-    description: "Integrated custodians, comprehensive reporting, and audit-ready infrastructure.",
+    description: "Connect to custodians and global venues with audit-ready reporting.",
     icon: "network",
   },
 ] as const;
@@ -52,21 +53,25 @@ export const HOW_IT_WORKS = [
     step: 1,
     title: "Assess & Structure",
     description: "Asset due diligence, Shariah screening, and legal wrapper creation.",
+    microcopy: "Due diligence and Shariah review",
   },
   {
     step: 2,
     title: "Tokenize & Issue",
     description: "Smart contracts deployment, KYC/AML, and wallet assignment.",
+    microcopy: "Smart contracts and KYC/AML",
   },
   {
     step: 3,
     title: "Distribute & Manage",
     description: "Investor onboarding, subscriptions, and comprehensive reporting.",
+    microcopy: "Investor onboarding and subscriptions",
   },
   {
     step: 4,
     title: "Settle & Monitor",
     description: "Cash flows, secondary workflows, and compliance reporting.",
+    microcopy: "Cash flows and compliance reporting",
   },
 ] as const;
 
@@ -98,7 +103,7 @@ export const PLATFORM_MODULES = [
   },
   {
     title: "Reporting & Audit",
-    description: "Comprehensive statements, cash-flow tracking, and ESG/green sukuk reporting.",
+    description: "Automated statements, cash flow and tax packs—export in one click.",
     features: ["Financial Statements", "Cash Flow", "Tax Packs", "ESG Reporting"],
   },
 ] as const;
@@ -142,38 +147,62 @@ export const PRICING = {
   title: "Transparent Pricing",
   plans: [
     {
-      name: "Platform Licensing",
-      price: "$50k–$150k/yr",
-      description: "SaaS platform access",
+      name: "Starter",
+      price: "$50k–$75k/yr",
+      description: "Pilot in SECP sandbox, core issuance, base reporting, email support",
+      features: [
+        "SECP Sandbox Access",
+        "Core Issuance Tools",
+        "Base Reporting",
+        "Email Support",
+        "Basic Compliance"
+      ],
+      cta: "Start Pilot",
+      popular: false,
     },
     {
-      name: "Transaction Fees",
-      price: "0.5%–1%",
-      description: "Per issuance",
+      name: "Growth",
+      price: "$100k–$150k/yr",
+      description: "Multi-jurisdiction, compliance automations, Fireblocks integration, SSO/SAML",
+      features: [
+        "Multi-Jurisdiction Support",
+        "Compliance Automations",
+        "Fireblocks Integration",
+        "SSO/SAML",
+        "Priority Support",
+        "Advanced Reporting"
+      ],
+      cta: "Scale Up",
+      popular: true,
     },
     {
-      name: "Advisory & Shariah",
-      price: "Project-based",
-      description: "Certification services",
-    },
-    {
-      name: "Secondary & Reporting",
-      price: "Usage-based",
-      description: "Trading and reporting features",
+      name: "Enterprise",
+      price: "Custom",
+      description: "Custom workflows, dedicated Shariah advisory, SLAs, on-prem/hybrid options",
+      features: [
+        "Custom Workflows",
+        "Dedicated Shariah Advisory",
+        "SLA Guarantees",
+        "On-Premise Options",
+        "White-Label Solutions",
+        "Dedicated Support"
+      ],
+      cta: "Contact Sales",
+      popular: false,
     },
   ],
-  note: "Volume and enterprise discounts available. OWN token payment discounts up to 20%.",
+  note: "Pay in OWN for up to 20% discount. Volume and enterprise discounts available.",
 } as const;
 
 export const TESTIMONIALS = [
   {
-    quote: "OWN LAB's platform enabled us to tokenize our REIT portfolio while maintaining full Shariah compliance. The regulatory pathway from Pakistan to GCC was seamless.",
+    quote: "OWN LAB's platform enabled seamless REIT tokenization with full Shariah compliance.",
     author: "Ahmed Hassan",
     role: "VP, Islamic Banking",
     company: "Regional REIT",
   },
   {
-    quote: "The turnkey approach saved us months of development time. We launched our pilot in the SECP sandbox within weeks.",
+    quote: "Turnkey approach saved months of development. SECP sandbox pilot launched in weeks.",
     author: "Sarah Al-Rashid",
     role: "Head of Digital Assets",
     company: "GCC Investment Bank",

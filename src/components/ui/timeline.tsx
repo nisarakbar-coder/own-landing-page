@@ -16,7 +16,7 @@ export function Timeline({ steps, className }: TimelineProps) {
   return (
     <div className={cn("relative", className)}>
       {/* Timeline line */}
-      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden sm:block" />
+      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-emerald-500/20 hidden sm:block" />
       
       <div className="space-y-12">
         {steps.map((step, index) => (
@@ -29,16 +29,16 @@ export function Timeline({ steps, className }: TimelineProps) {
             className="relative flex items-start"
           >
             {/* Step number */}
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg relative z-10">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500 text-slate-900 font-bold text-lg relative z-10">
               {step.step}
             </div>
             
             {/* Content */}
             <div className="ml-8 flex-1">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
+              <h3 className="text-xl font-semibold text-slate-100 mb-2">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-slate-300 leading-relaxed">
                 {step.description}
               </p>
             </div>

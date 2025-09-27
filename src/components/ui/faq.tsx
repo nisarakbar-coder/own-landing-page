@@ -28,7 +28,7 @@ export function FAQ({ title, items, className }: FAQProps) {
       className={cn("space-y-8", className)}
     >
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-foreground mb-4">{title}</h2>
+        <h2 className="text-3xl font-bold text-slate-100 mb-4">{title}</h2>
       </div>
       
       <Accordion type="single" collapsible className="w-full">
@@ -41,10 +41,10 @@ export function FAQ({ title, items, className }: FAQProps) {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <AccordionItem value={`item-${index}`} className="border-b">
-              <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+              <AccordionTrigger className="text-left text-lg font-semibold text-slate-100 hover:text-emerald-400">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-slate-300 leading-relaxed">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

@@ -74,16 +74,16 @@ export function Footer({ className }: FooterProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={cn("bg-secondary text-secondary-foreground", className)}
+      className={cn("bg-slate-900 text-slate-100", className)}
     >
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-bold text-primary">
+            <Link href="/" className="text-2xl font-bold text-emerald-400">
               OWN LAB
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-sm text-slate-400">
               RWA Investment Bank & Tokenization-as-a-Service
             </p>
             <div className="mt-6 flex space-x-4">
@@ -93,7 +93,7 @@ export function Footer({ className }: FooterProps) {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-slate-400 hover:text-emerald-400 transition-colors"
                     aria-label={social.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -113,7 +113,7 @@ export function Footer({ className }: FooterProps) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="lg:col-span-1"
             >
-              <h3 className="text-sm font-semibold text-foreground mb-4">
+              <h3 className="text-sm font-semibold text-slate-100 mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-3">
@@ -121,7 +121,7 @@ export function Footer({ className }: FooterProps) {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -138,7 +138,7 @@ export function Footer({ className }: FooterProps) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 border-t border-border pt-8"
+          className="mt-12 border-t border-white/10 pt-8"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="flex flex-wrap gap-6">
@@ -146,13 +146,13 @@ export function Footer({ className }: FooterProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
-            <p className="mt-4 text-sm text-muted-foreground md:mt-0">
+            <p className="mt-4 text-sm text-slate-400 md:mt-0">
               © {new Date().getFullYear()} OWN LAB. All rights reserved.
             </p>
           </div>

@@ -18,7 +18,7 @@ export function Container({
         {
           "max-w-2xl": size === "sm",
           "max-w-4xl": size === "md", 
-          "max-w-6xl": size === "lg",
+          "max-w-[1200px]": size === "lg", // Updated to match design system
           "max-w-7xl": size === "xl",
           "max-w-none": size === "full",
         },

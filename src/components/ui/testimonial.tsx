@@ -30,14 +30,14 @@ export function Testimonial({
     >
       <Card className="h-full">
         <CardContent className="p-6">
-          <Quote className="h-8 w-8 text-primary mb-4" />
-          <blockquote className="text-lg leading-relaxed text-foreground mb-6">
+          <Quote className="h-8 w-8 text-emerald-400 mb-4" />
+          <blockquote className="text-lg leading-relaxed text-slate-100 mb-6">
             &ldquo;{quote}&rdquo;
           </blockquote>
           <div>
-            <div className="font-semibold text-foreground">{author}</div>
-            <div className="text-sm text-muted-foreground">{role}</div>
-            <div className="text-sm font-medium text-primary">{company}</div>
+            <div className="font-semibold text-slate-100">{author}</div>
+            <div className="text-sm text-slate-300">{role}</div>
+            <div className="text-sm font-medium text-emerald-400">{company}</div>
           </div>
         </CardContent>
       </Card>

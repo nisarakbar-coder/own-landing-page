@@ -30,8 +30,8 @@ export function FeatureCard({
       <Card className={cn("h-full hover:shadow-lg transition-shadow", className)}>
         <CardHeader>
           {Icon && (
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-              <Icon className="h-6 w-6 text-primary" />
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20">
+              <Icon className="h-6 w-6 text-emerald-400" />
             </div>
           )}
           <CardTitle className="text-xl">{title}</CardTitle>
@@ -41,8 +41,8 @@ export function FeatureCard({
           <CardContent>
             <ul className="space-y-2">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-center text-sm text-muted-foreground">
-                  <span className="mr-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                <li key={index} className="flex items-center text-sm text-slate-300">
+                  <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   {feature}
                 </li>
               ))}

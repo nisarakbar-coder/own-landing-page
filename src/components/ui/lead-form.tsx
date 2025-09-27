@@ -112,9 +112,9 @@ export function LeadForm({ className }: LeadFormProps) {
       >
         <Card>
           <CardContent className="p-8">
-            <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-2">Thank you!</h3>
-            <p className="text-muted-foreground">
+            <CheckCircle className="h-16 w-16 text-emerald-500 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-slate-100 mb-2">Thank you!</h3>
+            <p className="text-slate-300">
               We&apos;ll be in touch soon to discuss your tokenization needs.
             </p>
           </CardContent>
@@ -271,15 +271,15 @@ export function LeadForm({ className }: LeadFormProps) {
                 required
                 className="mt-1"
               />
-              <label htmlFor="consent" className="text-sm text-muted-foreground">
+              <label htmlFor="consent" className="text-sm text-slate-300">
                 I consent to OWN LAB contacting me about their services and agree to the{" "}
-                <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.
+                <a href="/privacy" className="text-emerald-400 hover:text-emerald-300 hover:underline">Privacy Policy</a>.
               </label>
             </div>
             
             <Button 
               type="submit" 
-              className="w-full" 
+              className="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-900" 
               disabled={isSubmitting}
             >
               {isSubmitting ? (
