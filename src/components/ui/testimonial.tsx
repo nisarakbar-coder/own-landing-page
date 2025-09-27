@@ -32,7 +32,7 @@ export function Testimonial({
         <CardContent className="p-6">
           <Quote className="h-8 w-8 text-primary mb-4" />
           <blockquote className="text-lg leading-relaxed text-foreground mb-6">
-            "{quote}"
+            &ldquo;{quote}&rdquo;
           </blockquote>
           <div>
             <div className="font-semibold text-foreground">{author}</div>

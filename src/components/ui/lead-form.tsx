@@ -115,7 +115,7 @@ export function LeadForm({ className }: LeadFormProps) {
             <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-foreground mb-2">Thank you!</h3>
             <p className="text-muted-foreground">
-              We'll be in touch soon to discuss your tokenization needs.
+              We&apos;ll be in touch soon to discuss your tokenization needs.
             </p>
           </CardContent>
         </Card>

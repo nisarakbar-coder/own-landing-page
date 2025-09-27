@@ -43,7 +43,7 @@ export default function TermsPage() {
                   Disclaimer
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  The materials on our website are provided on an 'as is' basis. 
+                  The materials on our website are provided on an &apos;as is&apos; basis. 
                   OWN LAB makes no warranties, expressed or implied, and hereby 
                   disclaims and negates all other warranties.
                 </p>

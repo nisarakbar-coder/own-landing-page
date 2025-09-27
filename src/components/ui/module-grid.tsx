@@ -1,5 +1,4 @@
 import { FeatureCard } from "./feature-card";
-import { motion } from "framer-motion";
 import { 
   Layers, 
   Users, 

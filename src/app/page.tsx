@@ -25,7 +25,6 @@ import {
   ArrowRight,
   CheckCircle,
   Building,
-  TrendingUp,
   Users
 } from "lucide-react";
 import {
@@ -238,7 +237,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Supported Jurisdictions</h3>
                   <div className="space-y-3">
-                    {COMPLIANCE.jurisdictions.map((jurisdiction, index) => (
+                    {COMPLIANCE.jurisdictions.map((jurisdiction) => (
                       <div key={jurisdiction.name} className="flex items-center justify-between p-3 rounded-lg border">
                         <div>
                           <div className="font-medium">{jurisdiction.name}</div>
