@@ -161,12 +161,41 @@
       radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
   }
   
+  .bg-neural {
+    background-image: 
+      linear-gradient(45deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+      linear-gradient(-45deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+      radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+    background-size: 40px 40px, 40px 40px, 200px 200px, 200px 200px;
+  }
+  
   .card-glass {
     @apply bg-slate-900/60 border border-white/10 backdrop-blur-sm shadow-sm rounded-2xl;
   }
   
   .stat-chip {
     @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/50 border border-white/10 text-sm font-medium;
+  }
+  
+  .ai-glow {
+    @apply text-emerald-400;
+    text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+  }
+  
+  .ai-pulse {
+    animation: ai-pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes ai-pulse {
+    0%, 100% { 
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.3);
+    }
+    50% { 
+      border-color: rgba(16, 185, 129, 0.6);
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    }
   }
   
   /* Grid system for 12-column responsive layout */

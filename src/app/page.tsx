@@ -7,7 +7,8 @@ import { Section } from "@/components/layout/section";
 import { LeadForm } from "@/components/ui/lead-form";
 import { FAQ } from "@/components/ui/faq";
 import { Button } from "@/components/ui/button";
-import { StatStrip } from "@/components/ui/stat-strip";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { TrustLogos } from "@/components/ui/trust-logos";
 import { PricingTiers } from "@/components/ui/pricing-tiers";
@@ -19,7 +20,6 @@ import {
   Shield, 
   Map, 
   Network, 
-  Download,
   ArrowRight,
   CheckCircle,
   Users
@@ -39,8 +39,8 @@ import {
 } from "@/lib/constants";
 
 const valuePropIcons = {
-  "Turnkey TaaS Stack": Layers,
-  "Shariah-First": Shield,
+  "Turnkey TaaS + AI": Layers,
+  "Shariah-First Intelligence": Shield,
   "Regulatory Pathway": Map,
   "Institutional Connectivity": Network,
 };
@@ -52,85 +52,97 @@ export default function HomePage() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <Section id="hero" className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid bg-mesh" />
-          <Container className="relative">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <Section id="hero" className="bg-slate-950">
+          <Container className="py-20 md:py-28">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+              {/* LEFT: Copy */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="space-y-8"
+                initial={{opacity:0,y:12}} 
+                animate={{opacity:1,y:0}} 
+                transition={{duration:.5}} 
+                className="md:col-span-6"
               >
-                <div>
-                  <div className="text-eyebrow mb-4">{HERO.eyebrow}</div>
-                  <h1 className="text-h1 text-slate-100 mb-6">
+                <p className="text-emerald-400 uppercase tracking-wider text-xs md:text-sm">{HERO.eyebrow}</p>
+                <h1 className="mt-3 text-4xl md:text-6xl font-semibold leading-tight">
                     {HERO.headline}
                   </h1>
-                  <p className="text-lg leading-8 text-slate-300 max-w-2xl">
+                <p className="mt-4 text-slate-300 max-w-xl">
                     {HERO.subcopy}
                   </p>
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="text-lg px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-slate-900">
+
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Button 
+                    size="lg" 
+                    data-analytics="hero-primary-cta"
+                    aria-describedby="demo-description"
+                  >
                     {HERO.primaryCta}
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-white/20 text-slate-100 hover:bg-white/10">
-                    <Download className="mr-2 h-5 w-5" />
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-white/20" 
+                    data-analytics="hero-secondary-cta"
+                    aria-describedby="one-pager-description"
+                  >
                     {HERO.secondaryCta}
                   </Button>
                 </div>
                 
-                <div className="flex flex-wrap gap-3">
+                {/* Hidden descriptions for accessibility */}
+                <div className="sr-only">
+                  <div id="demo-description">Schedule a personalized demo to see our AI-powered tokenization platform in action</div>
+                  <div id="one-pager-description">Download our comprehensive investor overview document</div>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
                   {HERO.trustBadges.map((badge, index) => (
                     <motion.div
                       key={badge.name}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                      className="stat-chip"
+                      transition={{ duration: 0.6, delay: 0.3 + index * 0.06 }}
                     >
-                      <span className="text-emerald-400">{badge.name}</span>
+                      <Badge className="bg-emerald-950/40 border border-emerald-500/20 text-emerald-300">
+                        {badge.name}
+                      </Badge>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
               
+              {/* RIGHT: Visual + Stats */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
+                initial={{opacity:0,y:12}} 
+                animate={{opacity:1,y:0}} 
+                transition={{duration:.6, delay:.05}} 
+                className="md:col-span-6"
               >
-                {/* Abstract Stack Illustration */}
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-amber-500/20 rounded-2xl blur-xl" />
-                  <div className="relative aspect-square rounded-2xl bg-slate-900/50 border border-white/10 backdrop-blur-sm p-8 flex items-center justify-center">
-                    <div className="text-center space-y-4">
-                      <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-emerald-500/20 to-amber-500/20 flex items-center justify-center">
-                        <Network className="w-16 h-16 text-emerald-400" />
-                      </div>
-                      <div className="space-y-2">
-                        <div className="text-lg font-semibold text-slate-100">Tokenization Stack</div>
-                        <div className="text-sm text-slate-400">
-                          Institutional-grade infrastructure
-                        </div>
-                      </div>
-                    </div>
+                <div 
+                  className="relative isolate rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur p-10 shadow-[0_0_60px_rgba(16,185,129,0.15)] before:absolute before:-inset-16 before:-z-10 before:rounded-full before:bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,.25),transparent_60%)]"
+                  aria-label="Tokenization stack visualization"
+                >
+                  <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-2xl bg-slate-950/60 border border-white/10">
+                    <Network className="h-14 w-14 text-emerald-400" aria-hidden="true" />
                   </div>
+                  <p className="mt-4 text-center text-slate-400">Tokenization Stack</p>
                 </div>
                 
-                {/* StatStrip */}
+                <div className="mt-6 grid grid-cols-3 gap-3">
+                  {HERO.stats.map((stat, index) => (
                 <motion.div
+                      key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="mt-8"
+                      transition={{ duration: 0.6, delay: 0.4 + index * 0.06 }}
                 >
-                  <StatStrip stats={HERO.stats as readonly { label: string; value: string; }[]} />
+                      <Card className="bg-slate-900/70 border border-white/10 rounded-2xl p-5">
+                        <div className="text-2xl font-semibold">{stat.value}</div>
+                        <div className="text-slate-400 text-xs mt-1">{stat.label}</div>
+                      </Card>
                 </motion.div>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </Container>
@@ -362,7 +374,12 @@ export default function HomePage() {
                 </div>
                 
                 <div className="card-glass p-6">
-                  <h4 className="font-semibold text-slate-100 mb-3">Shariah Governance</h4>
+                  <div className="flex items-center gap-2 mb-3">
+                    <h4 className="font-semibold text-slate-100">Shariah Governance</h4>
+                    <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full ai-glow">
+                      AI Compliance Agents
+                    </span>
+                  </div>
                   <p className="text-sm text-slate-300 mb-4">{COMPLIANCE.shariahStatement}</p>
                   <Button variant="outline" size="sm" className="border-white/20 text-slate-100 hover:bg-white/10">
                     Download Governance Brief (PDF)
@@ -459,8 +476,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-8 text-center"
             >
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-400 mb-2">
                 Industry snapshot, Sept 2025. <span className="text-emerald-400 cursor-pointer hover:underline">Sources</span>
+              </p>
+              <p className="text-xs text-slate-500 ai-glow">
+                Agentic AI is redefining tokenization—making compliance, reporting, and distribution autonomous and adaptive.
               </p>
             </motion.div>
           </Container>

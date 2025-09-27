@@ -8,42 +8,42 @@ export const BRAND = {
 } as const;
 
 export const HERO = {
-  eyebrow: "Shariah-compliant RWA Platform",
-  headline: "Institutional-grade Tokenization for Islamic Finance",
-  subcopy: "Launch in Pakistan's SECP sandbox, expand to GCC & Malaysia, and connect to Western liquidity with a turnkey, compliant stack.",
+  eyebrow: "AI-POWERED RWA INFRASTRUCTURE",
+  headline: "Agentic AI Driving Shariah-Compliant Tokenization",
+  subcopy: "OWN LAB is the institutional gateway for Real-World Asset tokenization. Our agentic AI automates compliance, onboarding, and lifecycle management—delivering secure, Shariah-aligned, globally scalable infrastructure.",
   primaryCta: "Book a Demo",
-  secondaryCta: "Download One-Pager",
+  secondaryCta: "Download Investor One-Pager",
   stats: [
-    { label: "$50M AUM Target (Year 1)", value: "$50M" },
-    { label: "10 Institutional Clients", value: "10+" },
-    { label: "White-Label Platform", value: "Ready" },
+    { label: "Year 1 AUM Target", value: "$50M+" },
+    { label: "Institutional Clients in Pipeline", value: "10+" },
+    { label: "AI-Powered Compliance Engine", value: "Active" },
   ],
   trustBadges: [
-    { name: "SECP Sandbox", status: "Active", active: true },
-    { name: "Independent Shariah Review", status: "Certified", active: true },
-    { name: "Fireblocks-Ready", status: "Integrated", active: true },
+    { name: "SECP Sandbox Pilot", status: "Active", active: true },
+    { name: "Independent Shariah Oversight", status: "Certified", active: true },
+    { name: "AI Compliance Agents (Always-On)", status: "Deployed", active: true },
   ],
 } as const;
 
 export const VALUE_PROPS = [
   {
-    title: "Turnkey TaaS Stack",
-    description: "Issue, comply, custody, and manage secondary flows in one platform.",
+    title: "Turnkey TaaS + AI",
+    description: "Issue, comply, and manage assets with AI-powered orchestration.",
     icon: "layers",
   },
   {
-    title: "Shariah-First",
-    description: "Structures reviewed by independent scholars; Sukuk-friendly architecture.",
+    title: "Shariah-First Intelligence",
+    description: "AI agents monitor structures for Shariah compliance in real time.",
     icon: "shield-check",
   },
   {
     title: "Regulatory Pathway",
-    description: "Prove value in SECP, scale across GCC and Malaysia.",
+    description: "Agentic AI tracks evolving rules across SECP, GCC, Malaysia.",
     icon: "map",
   },
   {
     title: "Institutional Connectivity",
-    description: "Connect to custodians and venues with audit-ready reporting.",
+    description: "AI-driven reporting, audit prep, and cross-border settlement insights.",
     icon: "network",
   },
 ] as const;
@@ -52,59 +52,59 @@ export const HOW_IT_WORKS = [
   {
     step: 1,
     title: "Assess & Structure",
-    description: "Asset due diligence, Shariah screening, and legal wrapper creation.",
-    microcopy: "Due diligence and Shariah review",
+    description: "AI agents scan asset docs for compliance gaps and Shariah screening.",
+    microcopy: "AI-powered due diligence and Shariah review",
   },
   {
     step: 2,
     title: "Tokenize & Issue",
-    description: "Smart contracts deployment, KYC/AML, and wallet assignment.",
-    microcopy: "Smart contracts and KYC/AML",
+    description: "Smart contracts deployment with AI-driven KYC/AML automation.",
+    microcopy: "AI-enhanced smart contracts and KYC/AML",
   },
   {
     step: 3,
     title: "Distribute & Manage",
-    description: "Investor onboarding, subscriptions, and comprehensive reporting.",
-    microcopy: "Investor onboarding and subscriptions",
+    description: "AI personalizes investor onboarding, subscriptions, and support.",
+    microcopy: "AI concierge for investor onboarding",
   },
   {
     step: 4,
     title: "Settle & Monitor",
-    description: "Cash flows, secondary workflows, and compliance reporting.",
-    microcopy: "Cash flows and compliance reporting",
+    description: "AI agents reconcile transactions and flag anomalies in real-time.",
+    microcopy: "AI-driven transaction reconciliation",
   },
 ] as const;
 
 export const PLATFORM_MODULES = [
   {
     title: "Issuer Portal",
-    description: "Create offerings, manage tranches, handle documentation, and maintain cap tables.",
-    features: ["Offer Creation", "Tranche Management", "Documentation", "Cap Table"],
+    description: "AI-assisted structuring and document drafting with automated compliance checks.",
+    features: ["AI Document Drafting", "Smart Structuring", "Compliance Checks", "Cap Table AI"],
   },
   {
     title: "Investor Portal",
-    description: "KYC/AML onboarding with custodial and non-custodial wallet options.",
-    features: ["KYC/AML", "Wallet Choice", "Subscriptions", "Portfolio View"],
+    description: "AI concierge for onboarding, Q&A, and personalized investor support.",
+    features: ["AI Concierge", "Smart Onboarding", "Q&A Automation", "Portfolio AI"],
   },
   {
     title: "Compliance Engine",
-    description: "Automated allowlists, travel rule compliance, and AML screening.",
-    features: ["Allowlists", "Travel Rule", "AML Screening", "Audit Trail"],
+    description: "Agentic AI monitoring for Travel Rule, AML, and Shariah compliance in real-time.",
+    features: ["AI Compliance Agents", "Real-time Monitoring", "Shariah AI", "Audit AI"],
   },
   {
     title: "Custody & Settlement",
-    description: "Fireblocks integration with whitelisted jurisdictions and secure settlement.",
-    features: ["Fireblocks Integration", "Secure Settlement", "Multi-Jurisdiction", "Risk Management"],
+    description: "AI-driven transaction reconciliation with automated risk assessment.",
+    features: ["AI Reconciliation", "Smart Settlement", "Risk AI", "Multi-Jurisdiction AI"],
   },
   {
     title: "Secondary Workflows",
-    description: "OTC trading, bulletin boards, and ATS/venue integrations.",
-    features: ["OTC Trading", "Bulletin Board", "ATS Integration", "Liquidity Pools"],
+    description: "AI liquidity-matching suggestions and automated trading insights.",
+    features: ["AI Liquidity Matching", "Smart Trading", "Market AI", "Liquidity AI"],
   },
   {
     title: "Reporting & Audit",
-    description: "Automated statements, cash flow, and tax packs—export in one click.",
-    features: ["Financial Statements", "Cash Flow", "Tax Packs", "ESG Reporting"],
+    description: "Automated reporting with AI anomaly detection and predictive insights.",
+    features: ["AI Anomaly Detection", "Predictive Reporting", "Smart Analytics", "Audit AI"],
   },
 ] as const;
 
@@ -116,8 +116,8 @@ export const COMPLIANCE = {
     { name: "KSA", status: "In progress", active: false },
     { name: "Malaysia", status: "Islamic markets", active: true },
   ],
-  shariahStatement: "Reviewed by independent Shariah scholars. Structures include Sukuk-style profit-sharing and screened revenue models.",
-  travelRule: "Integrates with leading Travel Rule and AML providers for cross-border compliance.",
+  shariahStatement: "Agentic AI continuously monitors jurisdictional rules and Shariah standards, ensuring always-on compliance.",
+  travelRule: "AI agents integrate with leading Travel Rule and AML providers for autonomous cross-border compliance.",
 } as const;
 
 export const METRICS = [
@@ -134,12 +134,14 @@ export const ICP = {
     "Islamic banks",
     "REITs",
     "Sovereign funds",
+    "AI reduces compliance overhead for institutions",
+    "AI agents scale investor servicing across borders",
   ],
   useCases: [
-    { title: "Real Estate", description: "REIT tokenization and fractional ownership" },
-    { title: "Private Credit", description: "Shariah-compliant lending platforms" },
-    { title: "Sukuk", description: "Islamic bond tokenization" },
-    { title: "Commodities", description: "Gold and precious metals tokenization" },
+    { title: "Real Estate", description: "AI-powered REIT tokenization and fractional ownership" },
+    { title: "Private Credit", description: "AI-driven Shariah-compliant lending platforms" },
+    { title: "Sukuk", description: "AI-enhanced Islamic bond tokenization" },
+    { title: "Commodities", description: "AI-optimized gold and precious metals tokenization" },
   ],
 } as const;
 
@@ -149,13 +151,13 @@ export const PRICING = {
     {
       name: "Starter",
       price: "$50k–$75k/yr",
-      description: "Pilot in SECP sandbox, core issuance, base reporting, email support",
+      description: "AI-assisted compliance & onboarding with SECP sandbox access",
       features: [
-        "SECP Sandbox Access",
+        "AI Compliance Agents",
+        "AI-assisted Onboarding",
         "Core Issuance Tools",
         "Base Reporting",
-        "Email Support",
-        "Basic Compliance"
+        "Email Support"
       ],
       cta: "Start Pilot",
       popular: false,
@@ -163,14 +165,14 @@ export const PRICING = {
     {
       name: "Growth",
       price: "$100k–$150k/yr",
-      description: "Multi-jurisdiction, compliance automations, Fireblocks integration, SSO/SAML",
+      description: "Multi-jurisdiction AI monitoring with advanced automation",
       features: [
-        "Multi-Jurisdiction Support",
-        "Compliance Automations",
+        "Multi-Jurisdiction AI",
+        "AI Compliance Monitoring",
         "Fireblocks Integration",
         "SSO/SAML",
         "Priority Support",
-        "Advanced Reporting"
+        "AI Analytics"
       ],
       cta: "Scale Up",
       popular: true,
@@ -178,31 +180,31 @@ export const PRICING = {
     {
       name: "Enterprise",
       price: "Custom",
-      description: "Custom workflows, dedicated Shariah advisory, SLAs, on-prem/hybrid options",
+      description: "Custom AI agent workflows & private deployments with dedicated support",
       features: [
-        "Custom Workflows",
-        "Dedicated Shariah Advisory",
+        "Custom AI Agents",
+        "Private AI Deployments",
+        "Dedicated Shariah AI",
         "SLA Guarantees",
-        "On-Premise Options",
-        "White-Label Solutions",
+        "White-Label AI",
         "Dedicated Support"
       ],
       cta: "Contact Sales",
       popular: false,
     },
   ],
-  note: "Pay in OWN for up to 20% discount. Volume and enterprise discounts available.",
+  note: "AI modules included by default—no extra per-agent fee. Pay in OWN for up to 20% discount.",
 } as const;
 
 export const TESTIMONIALS = [
   {
-    quote: "OWN LAB's platform enabled seamless REIT tokenization with full Shariah compliance.",
+    quote: "AI compliance agents reduced our onboarding time by 40%.",
     author: "Ahmed Hassan",
     role: "VP, Islamic Banking",
-    company: "Regional REIT",
+    company: "Regional Islamic Bank",
   },
   {
-    quote: "Turnkey approach saved months of development. SECP sandbox pilot launched in weeks.",
+    quote: "OWN LAB's AI agents enabled seamless REIT tokenization with full Shariah compliance.",
     author: "Sarah Al-Rashid",
     role: "Head of Digital Assets",
     company: "GCC Investment Bank",
