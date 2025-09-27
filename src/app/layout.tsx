@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     title: "OWN LAB — RWA Investment Bank & Tokenization-as-a-Service",
     description: "Turnkey, Shariah-compliant tokenization platform for institutional RWAs. Launch in SECP sandbox, expand to GCC & Malaysia, connect to global liquidity.",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({

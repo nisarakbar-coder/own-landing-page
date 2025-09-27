@@ -9,8 +9,8 @@ export const BRAND = {
 
 export const HERO = {
   eyebrow: "Shariah-compliant RWA Platform",
-  headline: "Institutional-grade Tokenization, Built for Islamic Finance",
-  subcopy: "Launch in Pakistan's SECP sandbox, expand into GCC & Malaysia, and connect to Western liquidity with a turnkey, compliant stack.",
+  headline: "Institutional-grade Tokenization for Islamic Finance",
+  subcopy: "Launch in Pakistan's SECP sandbox, expand to GCC & Malaysia, and connect to Western liquidity with a turnkey, compliant stack.",
   primaryCta: "Book a Demo",
   secondaryCta: "Download One-Pager",
   stats: [
@@ -20,30 +20,30 @@ export const HERO = {
   ],
   trustBadges: [
     { name: "SECP Sandbox", status: "Active", active: true },
-    { name: "Independent Shariah Board", status: "Certified", active: true },
-    { name: "Fireblocks Custody", status: "Integrated", active: true },
+    { name: "Independent Shariah Review", status: "Certified", active: true },
+    { name: "Fireblocks-Ready", status: "Integrated", active: true },
   ],
 } as const;
 
 export const VALUE_PROPS = [
   {
-    title: "Turnkey TaaS",
-    description: "Complete issuance, compliance, custody, and secondary workflows in one platform.",
+    title: "Turnkey TaaS Stack",
+    description: "Issue, comply, custody, and manage secondary flows in one platform.",
     icon: "layers",
   },
   {
     title: "Shariah-First",
-    description: "Scholar-reviewed structures with screened revenue models and Sukuk-friendly architecture.",
+    description: "Structures reviewed by independent scholars; Sukuk-friendly architecture.",
     icon: "shield-check",
   },
   {
     title: "Regulatory Pathway",
-    description: "Prove value in SECP, scale to GCC/Malaysia, tap Western liquidity.",
+    description: "Prove value in SECP, scale across GCC and Malaysia.",
     icon: "map",
   },
   {
     title: "Institutional Connectivity",
-    description: "Connect to custodians and global venues with audit-ready reporting.",
+    description: "Connect to custodians and venues with audit-ready reporting.",
     icon: "network",
   },
 ] as const;
@@ -103,7 +103,7 @@ export const PLATFORM_MODULES = [
   },
   {
     title: "Reporting & Audit",
-    description: "Automated statements, cash flow and tax packs—export in one click.",
+    description: "Automated statements, cash flow, and tax packs—export in one click.",
     features: ["Financial Statements", "Cash Flow", "Tax Packs", "ESG Reporting"],
   },
 ] as const;
@@ -121,7 +121,7 @@ export const COMPLIANCE = {
 } as const;
 
 export const METRICS = [
-  { label: "$30B+ on-chain RWAs (2025)", value: "$30B+", description: "Industry context" },
+  { label: "$30B+ on-chain RWAs (ex-stablecoins, 2025)", value: "$30B+", description: "Industry context" },
   { label: "114+ tokenization platforms", value: "114+", description: "Industry growth" },
   { label: "0.5%–1% typical issuance fee", value: "0.5%–1%", description: "Fee range" },
   { label: "$50k–$150k annual licensing", value: "$50k–$150k", description: "Platform cost" },

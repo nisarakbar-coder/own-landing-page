@@ -12,6 +12,7 @@ import { StatsBar } from "@/components/ui/stats-bar";
 import { TrustLogos } from "@/components/ui/trust-logos";
 import { PricingTiers } from "@/components/ui/pricing-tiers";
 import { JurisdictionTimeline } from "@/components/ui/jurisdiction-timeline";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 import { motion } from "framer-motion";
 import { 
   Layers, 
@@ -38,7 +39,7 @@ import {
 } from "@/lib/constants";
 
 const valuePropIcons = {
-  "Turnkey TaaS": Layers,
+  "Turnkey TaaS Stack": Layers,
   "Shariah-First": Shield,
   "Regulatory Pathway": Map,
   "Institutional Connectivity": Network,
@@ -103,15 +104,15 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                {/* 3D Glassmorphism Card Stack */}
+                {/* Abstract Stack Illustration */}
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-amber-500/20 rounded-2xl blur-xl" />
                   <div className="relative aspect-square rounded-2xl bg-slate-900/50 border border-white/10 backdrop-blur-sm p-8 flex items-center justify-center">
-                  <div className="text-center space-y-4">
+                    <div className="text-center space-y-4">
                       <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-emerald-500/20 to-amber-500/20 flex items-center justify-center">
                         <Network className="w-16 h-16 text-emerald-400" />
-                    </div>
-                    <div className="space-y-2">
+                      </div>
+                      <div className="space-y-2">
                         <div className="text-lg font-semibold text-slate-100">Tokenization Stack</div>
                         <div className="text-sm text-slate-400">
                           Institutional-grade infrastructure
@@ -163,7 +164,7 @@ export default function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="card-glass p-6 rounded-2xl"
+                    className="card-glass p-6"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center">
@@ -200,7 +201,34 @@ export default function HomePage() {
               </p>
             </motion.div>
             
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {/* Desktop: Horizontal Timeline */}
+            <div className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute top-6 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500/20 via-emerald-500/40 to-emerald-500/20" />
+                <div className="grid grid-cols-4 gap-8">
+                  {HOW_IT_WORKS.map((step, index) => (
+                    <motion.div
+                      key={step.step}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="card-glass p-6 text-center relative"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-900 font-bold text-lg flex items-center justify-center mx-auto mb-4 relative z-10">
+                        {step.step}
+                      </div>
+                      <h3 className="text-lg font-semibold text-slate-100 mb-2">{step.title}</h3>
+                      <p className="text-slate-300 text-sm mb-2">{step.description}</p>
+                      <p className="text-emerald-400 text-xs font-medium">{step.microcopy}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile: Vertical Timeline */}
+            <div className="lg:hidden space-y-8">
               {HOW_IT_WORKS.map((step, index) => (
                 <motion.div
                   key={step.step}
@@ -208,14 +236,16 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="card-glass p-6 rounded-2xl text-center"
+                  className="card-glass p-6 flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-900 font-bold text-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-900 font-bold text-lg flex items-center justify-center flex-shrink-0">
                     {step.step}
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-100 mb-2">{step.title}</h3>
-                  <p className="text-slate-300 text-sm mb-2">{step.description}</p>
-                  <p className="text-emerald-400 text-xs font-medium">{step.microcopy}</p>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-slate-100 mb-2">{step.title}</h3>
+                    <p className="text-slate-300 text-sm mb-2">{step.description}</p>
+                    <p className="text-emerald-400 text-xs font-medium">{step.microcopy}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -228,7 +258,7 @@ export default function HomePage() {
               className="mt-8 text-center"
             >
               <p className="text-sm text-slate-400">
-                Custodial & non-custodial flows supported; KYC/AML baked in.
+                Custodial & non-custodial supported; KYC/AML built-in.
               </p>
             </motion.div>
           </Container>
@@ -260,7 +290,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="card-glass p-6 rounded-2xl"
+                  className="card-glass p-6"
                 >
                   <h3 className="text-lg font-semibold text-slate-100 mb-2">{module.title}</h3>
                   <p className="text-slate-300 text-sm mb-4">{module.description}</p>
@@ -320,7 +350,7 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-slate-100 mb-6">Built for Regulated Markets</h3>
                   <div className="grid gap-4 sm:grid-cols-2">
                     {COMPLIANCE.jurisdictions.map((jurisdiction) => (
-                      <div key={jurisdiction.name} className="card-glass p-4 rounded-2xl">
+                      <div key={jurisdiction.name} className="card-glass p-4">
                         <div className="flex items-center justify-between mb-2">
                           <div className="font-medium text-slate-100">{jurisdiction.name}</div>
                           <div className={`w-3 h-3 rounded-full ${jurisdiction.active ? 'bg-emerald-500' : 'bg-slate-600'}`} />
@@ -331,7 +361,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 
-                <div className="card-glass p-6 rounded-2xl">
+                <div className="card-glass p-6">
                   <h4 className="font-semibold text-slate-100 mb-3">Shariah Governance</h4>
                   <p className="text-sm text-slate-300 mb-4">{COMPLIANCE.shariahStatement}</p>
                   <Button variant="outline" size="sm" className="border-white/20 text-slate-100 hover:bg-white/10">
@@ -359,12 +389,12 @@ export default function HomePage() {
                       <div key={feature} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-emerald-500" />
                         <span className="text-slate-300">{feature}</span>
-                    </div>
+                      </div>
                     ))}
                   </div>
                 </div>
                 
-                <div className="card-glass p-6 rounded-2xl">
+                <div className="card-glass p-6">
                   <h4 className="font-semibold text-slate-100 mb-3">Provider Integration</h4>
                   <p className="text-sm text-slate-300 mb-4">{COMPLIANCE.travelRule}</p>
                   <div className="flex gap-2">
@@ -387,10 +417,22 @@ export default function HomePage() {
             >
               <JurisdictionTimeline jurisdictions={COMPLIANCE.jurisdictions as readonly { name: string; status: string; active: boolean; }[]} />
             </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-8 text-center"
+            >
+              <p className="text-xs text-slate-500">
+                *Designations shown may reflect partnerships/integration readiness; formal approvals/certifications are jurisdiction-specific.*
+              </p>
+            </motion.div>
           </Container>
         </Section>
 
-        {/* Metrics Section */}
+        {/* Industry Context Section */}
         <Section id="metrics" background="muted">
           <Container>
             <motion.div
@@ -448,7 +490,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="card-glass p-6 rounded-2xl"
+                className="card-glass p-6"
               >
                 <h3 className="text-xl font-semibold text-slate-100 mb-6">Target Clients</h3>
                 <div className="space-y-4">
@@ -473,7 +515,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="card-glass p-6 rounded-2xl"
+                className="card-glass p-6"
               >
                 <h3 className="text-xl font-semibold text-slate-100 mb-6">Use Cases</h3>
                 <div className="space-y-4">
@@ -571,7 +613,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="card-glass p-6 rounded-2xl"
+                  className="card-glass p-6"
                 >
                   <blockquote className="text-slate-300 mb-4">
                     &ldquo;{testimonial.quote}&rdquo;
@@ -619,13 +661,13 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="card-glass p-6 rounded-2xl hover:shadow-lg transition-all duration-300"
+                  className="card-glass p-6 hover:shadow-lg transition-all duration-300"
                 >
-                      <div className="mb-4">
+                  <div className="mb-4">
                     <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400">
-                          {resource.type}
-                        </div>
-                      </div>
+                      {resource.type}
+                    </div>
+                  </div>
                   <h3 className="text-lg font-semibold text-slate-100 mb-2">{resource.title}</h3>
                   <p className="text-slate-300 text-sm mb-4">{resource.description}</p>
                   <Button variant="outline" size="sm" className="w-full border-white/20 text-slate-100 hover:bg-white/10">
@@ -699,9 +741,9 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="card-glass p-6 rounded-2xl"
+                  className="card-glass p-6"
                 >
-              <LeadForm />
+                  <LeadForm />
                 </motion.div>
               </div>
             </div>
@@ -735,6 +777,19 @@ export default function HomePage() {
       </main>
       
       <Footer />
+      
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-4 left-4 right-4 z-50 lg:hidden">
+        <Button 
+          size="lg" 
+          className="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-900 shadow-lg"
+        >
+          Book a Demo
+        </Button>
+      </div>
+      
+      {/* Cookie Banner */}
+      <CookieBanner />
     </div>
   );
 }
