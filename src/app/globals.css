@@ -187,6 +187,10 @@
     animation: ai-pulse 2s ease-in-out infinite;
   }
   
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
   @keyframes ai-pulse {
     0%, 100% { 
       border-color: rgba(16, 185, 129, 0.3);

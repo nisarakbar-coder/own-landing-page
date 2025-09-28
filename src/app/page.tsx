@@ -14,6 +14,7 @@ import { TrustLogos } from "@/components/ui/trust-logos";
 import { PricingTiers } from "@/components/ui/pricing-tiers";
 import { JurisdictionTimeline } from "@/components/ui/jurisdiction-timeline";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { TokenizationStack } from "@/components/ui/tokenization-stack";
 import { motion } from "framer-motion";
 import { 
   Layers, 
@@ -119,15 +120,7 @@ export default function HomePage() {
                 transition={{duration:.6, delay:.05}} 
                 className="md:col-span-6"
               >
-                <div 
-                  className="relative isolate rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur p-10 shadow-[0_0_60px_rgba(16,185,129,0.15)] before:absolute before:-inset-16 before:-z-10 before:rounded-full before:bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,.25),transparent_60%)]"
-                  aria-label="Tokenization stack visualization"
-                >
-                  <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-2xl bg-slate-950/60 border border-white/10">
-                    <Network className="h-14 w-14 text-emerald-400" aria-hidden="true" />
-                  </div>
-                  <p className="mt-4 text-center text-slate-400">Tokenization Stack</p>
-                </div>
+                <TokenizationStack />
                 
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   {HERO.stats.map((stat, index) => (
