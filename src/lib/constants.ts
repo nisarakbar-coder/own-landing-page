@@ -56,25 +56,41 @@ export const HOW_IT_WORKS = {
       step: 1,
       title: "Select Asset",
       description: "Validate ownership and valuation.",
+      detailedDescription: "Our team works with you to identify and validate real-world assets suitable for tokenization, ensuring proper ownership documentation and independent valuation.",
       entity: "Business / Asset Issuer",
+      icon: "Building2",
+      duration: "1-2 weeks",
+      features: ["Asset validation", "Ownership verification", "Valuation assessment"]
     },
     {
       step: 2,
       title: "Define Token",
       description: "Choose type, supply, and rules.",
+      detailedDescription: "We help design the token structure, including token type, total supply, governance rules, and economic model that aligns with your business objectives.",
       entity: "Token Issuer / Custodian",
+      icon: "Coins",
+      duration: "2-3 weeks",
+      features: ["Token design", "Smart contract development", "Governance setup"]
     },
     {
       step: 3,
       title: "Compliance",
       description: "KYC/AML, legal, enforceable ownership.",
+      detailedDescription: "Full regulatory compliance including KYC/AML procedures, legal documentation, and ensuring enforceable ownership rights across jurisdictions.",
       entity: "Custodian / Regulator",
+      icon: "Shield",
+      duration: "3-4 weeks",
+      features: ["KYC/AML setup", "Legal documentation", "Regulatory compliance"]
     },
     {
       step: 4,
       title: "Distribute",
       description: "Investor subscriptions; secondary workflows.",
+      detailedDescription: "Launch token distribution to qualified investors with secondary market infrastructure, trading capabilities, and ongoing investor relations.",
       entity: "Investors / Secondary Market",
+      icon: "Users",
+      duration: "2-3 weeks",
+      features: ["Investor onboarding", "Trading platform", "Secondary markets"]
     },
   ],
 } as const;

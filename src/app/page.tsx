@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TokenizationStack } from "@/components/ui/tokenization-stack";
+import { ProcessFlow } from "@/components/ui/process-flow";
 import { motion } from "framer-motion";
 import { 
   Layers, 
@@ -202,55 +203,8 @@ export default function HomePage() {
               </p>
             </motion.div>
             
-            {/* Desktop: Horizontal Timeline */}
-            <div className="hidden lg:block">
-              <div className="relative">
-                {/* Connector line */}
-                <div className="absolute top-6 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500/20 via-emerald-500/40 to-emerald-500/20" />
-                <div className="grid grid-cols-4 gap-8">
-                  {HOW_IT_WORKS.steps.map((step, index) => (
-                    <motion.div
-                      key={step.step}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="card-glass p-6 text-center relative"
-                    >
-                      <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-900 font-bold text-lg flex items-center justify-center mx-auto mb-4 relative z-10">
-                        {step.step}
-                      </div>
-                      <h3 className="text-lg font-semibold text-slate-100 mb-2">{step.title}</h3>
-                      <p className="text-slate-300 text-sm mb-2">{step.description}</p>
-                      <p className="text-emerald-400 text-xs font-medium">{step.entity}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            
-            {/* Mobile: Vertical Timeline */}
-            <div className="lg:hidden space-y-8">
-              {HOW_IT_WORKS.steps.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="card-glass p-6 flex items-start gap-4"
-                >
-                  <div className="w-12 h-12 rounded-full bg-emerald-500 text-slate-900 font-bold text-lg flex items-center justify-center flex-shrink-0">
-                    {step.step}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-slate-100 mb-2">{step.title}</h3>
-                    <p className="text-slate-300 text-sm mb-2">{step.description}</p>
-                    <p className="text-emerald-400 text-xs font-medium">{step.entity}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            {/* Enhanced Process Flow */}
+            <ProcessFlow steps={HOW_IT_WORKS.steps} />
           </Container>
         </Section>
 
