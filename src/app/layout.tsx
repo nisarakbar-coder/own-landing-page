@@ -13,20 +13,22 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "OWN LAB — RWA Investment Bank & Tokenization-as-a-Service",
-  description: "Turnkey, Shariah-compliant tokenization platform for institutional RWAs. Launch in SECP sandbox, expand to GCC & Malaysia, connect to global liquidity.",
-  keywords: ["RWA", "tokenization", "Shariah", "Islamic finance", "SECP", "GCC", "Malaysia", "blockchain", "institutional"],
+  title: "OWN LAB — AI-Powered RWA Infrastructure",
+  description: "Agentic AI driving Shariah-compliant tokenization. Institutional gateway for RWA tokenization with automated compliance, onboarding, and lifecycle management.",
+  keywords: ["RWA", "tokenization", "Shariah", "Islamic finance", "SECP", "GCC", "Malaysia", "blockchain", "institutional", "AI", "agentic", "compliance"],
   authors: [{ name: "OWN LAB" }],
   openGraph: {
-    title: "OWN LAB — RWA Investment Bank & Tokenization-as-a-Service",
-    description: "Turnkey, Shariah-compliant tokenization platform for institutional RWAs. Launch in SECP sandbox, expand to GCC & Malaysia, connect to global liquidity.",
+    title: "OWN LAB — AI-Powered RWA Infrastructure",
+    description: "Agentic AI driving Shariah-compliant tokenization. Institutional gateway for RWA tokenization with automated compliance, onboarding, and lifecycle management.",
     type: "website",
     locale: "en_US",
+    siteName: "OWN LAB",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OWN LAB — RWA Investment Bank & Tokenization-as-a-Service",
-    description: "Turnkey, Shariah-compliant tokenization platform for institutional RWAs. Launch in SECP sandbox, expand to GCC & Malaysia, connect to global liquidity.",
+    title: "OWN LAB — AI-Powered RWA Infrastructure",
+    description: "Agentic AI driving Shariah-compliant tokenization. Institutional gateway for RWA tokenization with automated compliance, onboarding, and lifecycle management.",
+    creator: "@own_lab",
   },
   robots: {
     index: true,
@@ -53,7 +55,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "OWN LAB",
-              "description": "RWA Investment Bank & Tokenization-as-a-Service",
+              "description": "AI-Powered RWA Infrastructure for Shariah-compliant tokenization",
               "url": "https://ownlab.com",
               "logo": "https://ownlab.com/logo.png",
               "sameAs": [
@@ -63,7 +65,12 @@ export default function RootLayout({
               "offers": {
                 "@type": "Service",
                 "name": "Tokenization-as-a-Service",
-                "description": "Turnkey, Shariah-compliant tokenization platform for institutional RWAs"
+                "description": "Agentic AI automates compliance, onboarding, and lifecycle management for institutional RWAs"
+              },
+              "product": {
+                "@type": "Product",
+                "name": "OWN LAB Platform",
+                "description": "Agentic AI driving Shariah-compliant tokenization with automated compliance and institutional connectivity"
               }
             })
           }}

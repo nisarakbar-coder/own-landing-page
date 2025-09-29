@@ -49,7 +49,7 @@ const footerSections = [
   {
     title: "Contact",
     links: [
-      { name: "Book Demo", href: "#demo" },
+      { name: "Apply Now", href: "#start-pilot" },
       { name: "Sales", href: "mailto:sales@ownlab.com" },
       { name: "Support", href: "mailto:support@ownlab.com" },
       { name: "Partnerships", href: "mailto:partnerships@ownlab.com" },

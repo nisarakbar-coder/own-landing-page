@@ -57,7 +57,7 @@ export function Navbar() {
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-slate-900">
-            <Link href="#demo">Book a Demo</Link>
+            <Link href="#start-pilot">Apply Now</Link>
           </Button>
         </div>
       </nav>
@@ -83,7 +83,7 @@ export function Navbar() {
               ))}
               <div className="pt-4">
                 <Button asChild className="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-900">
-                  <Link href="#demo">Book a Demo</Link>
+                  <Link href="#start-pilot">Apply Now</Link>
                 </Button>
               </div>
             </div>
