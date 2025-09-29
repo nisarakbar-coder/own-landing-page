@@ -7,12 +7,9 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: "Why OWN LAB", href: "#why" },
-  { name: "Platform", href: "#platform" },
-  { name: "Compliance", href: "#compliance" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Resources", href: "#resources" },
-  { name: "Contact", href: "#contact" },
+  { name: "How It Works", href: "#how-it-works" },
+  { name: "Why OWN LAB", href: "#why-own-lab" },
+  { name: "Apply Now", href: "#start-pilot" },
 ];
 
 export function Navbar() {
